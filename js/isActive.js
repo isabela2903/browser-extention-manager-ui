@@ -4,7 +4,9 @@ export async function isActive() {
   const toggles = document.querySelectorAll(".toggle");
   const extensions = await getData();
   
-  extensions.forEach((extension, index) => {
-    toggles[index].checked = !!extension.isActive
+  toggles.forEach((toggle) => {
+    const name = toggle.getAttribute('data-name')
+    const target = extensions.find((item) => item.name === name);
+    toggle.checked = !!target.isActive
   })
 }

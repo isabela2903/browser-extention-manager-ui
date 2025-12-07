@@ -1,8 +1,5 @@
-import { getData } from "./toggleExtensions.js";
-
-export async function renderCards() {
+export async function renderCards(extensions) {
     const container = document.querySelector(".extensions-list");
-    const extensions = getData();
 
   container.innerHTML = extensions
     .map(
