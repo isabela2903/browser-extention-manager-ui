@@ -1,0 +1,108 @@
+body {
+  background: var(--dark-gradient);
+}
+
+/* ----------------------------- HEADER ----------------------------- */
+
+.header {
+  background-color: var(--neutral-800);
+}
+
+.logo svg {
+  filter: brightness(3);
+}
+
+.logo h1 {
+  color: var(--neutral-100);
+}
+
+.btn-theme {
+  background-color: var(--neutral-700);
+  background-image: url(../assets/images/icon-sun.svg);
+}
+
+.btn-theme:focus {
+  background-color: var(--neutral-600);
+}
+
+.btn-theme:hover {
+  background-color: var(--neutral-600);
+}
+
+/* ----------------------------- FILTER SECTION ----------------------------- */
+
+.extensions-filter h2 {
+  color: var(--neutral-100);
+}
+
+.extensions-filter ul li .btn-filter {
+  background-color: var(--neutral-500);
+  color: var(--neutral-100);
+  border: 0.1px solid var(--border-dark);
+}
+
+.extensions-filter ul li .btn-filter.selected {
+  background-color: var(--red-400);
+  color: var(--neutral-900);
+  font-weight: 600;
+}
+
+.extensions-filter ul li .btn-filter:not(.selected):focus {
+  background-color: var(--neutral-600);
+}
+
+.extensions-filter ul li .btn-filter:not(.selected):hover {
+  background-color: var(--neutral-600);
+}
+
+.extensions-filter ul li .btn-filter.selected:hover {
+  background-color: var(--red-500);
+}
+
+/* ----------------------------- EXTENSION LIST ----------------------------- */
+
+.extensions-list .card {
+  background-color: var(--neutral-800);
+  border: 0.1px solid var(--border-dark);
+}
+
+.extensions-list .card .card-header h2 {
+  color: var(--neutral-100);
+}
+
+.extensions-list .card .card-header p {
+  color: var(--neutral-300);
+}
+
+.extensions-list .card .card-actions .btn-remove {
+  color: var(--neutral-100);
+  border: 0.1px solid var(--border-dark);
+}
+
+.extensions-list .card .card-actions .btn-remove:focus {
+  background-color: var(--neutral-600);
+}
+
+.extensions-list .card .card-actions .btn-remove:hover {
+  background-color: var(--red-500);
+  color: var(--neutral-900);
+  font-weight: 600;
+}
+
+/* ----------------------------- TOGGLE ----------------------------- */
+
+.slider {
+  background-color: var(--neutral-600);
+}
+
+.slider:before {
+    background-color: var(--neutral-100);
+}
+
+input:checked + .slider {
+  background-color: var(--red-400);
+}
+
+input:not(:checked):hover + .slider {
+  background-color: rgba(84, 89, 105, 0.5);
+}

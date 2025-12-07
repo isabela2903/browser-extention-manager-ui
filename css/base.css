@@ -1,0 +1,171 @@
+body {
+  padding: 2.5rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* ----------------------------- HEADER ----------------------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9375rem;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logo h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.btn-theme {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.btn-theme:focus {
+  outline: 2px solid var(--red-400);
+  outline-offset: 3px;
+}
+
+/* ----------------------------- FILTER SECTION ----------------------------- */
+
+.extensions-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 3rem auto 1.5rem auto;
+}
+
+.extensions-filter h2 {
+  font-size: 30px;
+}
+
+.extensions-filter ul {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.extensions-filter ul li .btn-filter {
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.extensions-filter ul li .btn-filter:focus {
+  outline: 2px solid var(--red-400);
+  outline-offset: 3px;
+}
+
+/* ----------------------------- EXTENSION LIST ----------------------------- */
+
+.extensions-list {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.extensions-list .card {
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.extensions-list .card .card-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.extensions-list .card .card-header h2 {
+  margin-bottom: 0.3125rem;
+}
+
+.extensions-list .card .card-actions {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.extensions-list .card .card-actions .btn-remove {
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.extensions-list .card .card-actions .btn-remove:focus {
+  outline: 2px solid var(--red-400);
+  outline-offset: 3px;
+}
+
+/* ----------------------------- TOGGLE ----------------------------- */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+input {
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-weight: 600;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.switch input:focus {
+  outline: none;
+}
+
+.switch input:focus + .slider {
+  outline: 2px solid var(--red-400);
+  outline-offset: 3px;
+}
+
+input:checked:hover + .slider {
+  background-color: var(--red-500);
+}

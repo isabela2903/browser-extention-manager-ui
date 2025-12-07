@@ -1,0 +1,98 @@
+body {
+  background: var(--light-gradient);
+}
+
+/* ----------------------------- HEADER ----------------------------- */
+
+.header {
+  background-color: var(--neutral-0);
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+  color: var(--neutral-900);
+}
+
+.btn-theme {
+  background-color: var(--neutral-100);
+  background-image: url(../assets/images/icon-moon.svg);
+}
+
+.btn-theme:hover {
+  background-color: var(--neutral-300);
+}
+
+/* ----------------------------- FILTER SECTION ----------------------------- */
+
+.extensions-filter h2 {
+  color: var(--neutral-900);
+}
+
+.extensions-filter ul li .btn-filter {
+  background-color: var(--neutral-0);
+  color: var(--neutral-900);
+  border: 1px solid var(--border-light);
+}
+
+.extensions-filter ul li .btn-filter.selected {
+  background-color: var(--red-700);
+  color: var(--neutral-0);
+}
+
+.extensions-filter ul li .btn-filter:not(.selected):hover {
+  opacity: 0.7;
+}
+
+.extensions-filter ul li .btn-filter.selected:hover {
+  background-color: var(--red-500);
+}
+
+/* ----------------------------- EXTENSION LIST ----------------------------- */
+
+.extensions-list .card {
+  background-color: var(--neutral-0);
+  border: 1px solid var(--border-light);
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.extensions-list .card .card-header h2 {
+  color: var(--neutral-900);
+}
+
+.extensions-list .card .card-header p {
+  color: var(--neutral-600);
+}
+
+.extensions-list .card .card-actions .btn-remove {
+  color: var(--neutral-900);
+  border: 2px solid var(--border-light);
+}
+
+.extensions-list .card .card-actions .btn-remove:focus {
+  background-color: var(--neutral-100);
+  border: none;
+}
+
+.extensions-list .card .card-actions .btn-remove:hover {
+  background-color: var(--red-700);
+  color: var(--neutral-0);
+  border: none;
+}
+
+/* ----------------------------- TOGGLE ----------------------------- */
+
+.slider {
+  background-color: var(--neutral-300);
+}
+
+.slider:before {
+  background-color: var(--neutral-0);
+}
+
+input:checked + .slider {
+  background-color: var(--red-700);
+}
+
+input:not(:checked):hover + .slider {
+  background-color: rgba(199, 199, 199, 0.5);
+}
