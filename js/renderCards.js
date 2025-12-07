@@ -1,14 +1,12 @@
-export async function fetchData() {
-    const response = await fetch('./data/data.json')
-    const data = await response.json()
-    return data
-}
+import { getData } from "./toggleExtensions.js";
 
 export async function renderCards() {
-    const extensions = await fetchData()
-    const container = document.querySelector('.extensions-list')
+    const container = document.querySelector(".extensions-list");
+    const extensions = getData();
 
-    container.innerHTML = extensions.map(extension => `
+  container.innerHTML = extensions
+    .map(
+      (extension) => `
         <div class="card">
             <div class="card-header">
                 <img src="${extension.logo}" alt="${extension.name} Logo" class="card-logo">
@@ -20,12 +18,14 @@ export async function renderCards() {
             </div>
 
             <div class="card-actions">
-                <button class="btn-remove">Remove</button>
+                <button class="btn-remove" data-name="${extension.name}">Remove</button>
                 <label class="switch">
                     <input type="checkbox" class="toggle" data-name="${extension.name}" />
                     <span class="slider"></span>
                 </label>
             </div>
         </div>
-    `).join('')
+    `
+    )
+    .join("");
 }

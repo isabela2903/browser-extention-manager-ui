@@ -117,6 +117,10 @@ body {
   outline-offset: 3px;
 }
 
+.extensions-list .card.removed {
+  display: none;
+}
+
 /* ----------------------------- TOGGLE ----------------------------- */
 
 .switch {

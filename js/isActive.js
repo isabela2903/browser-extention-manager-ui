@@ -1,4 +1,4 @@
-import { getData } from "./storage.js";
+import { getData } from "./toggleExtensions.js";
 
 export async function isActive() {
   const toggles = document.querySelectorAll(".toggle");
