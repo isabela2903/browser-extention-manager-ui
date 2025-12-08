@@ -1,7 +1,4 @@
 import { applyFilter } from "./applyFilter.js";
-import { isActive } from "./isActive.js";
-import { renderCards } from "./renderCards.js";
-import { getData, toggleExtensions } from "./toggleExtensions.js";
 
 export function filterExtensions() {
     const btnsFilter = document.querySelectorAll(".btn-filter");
