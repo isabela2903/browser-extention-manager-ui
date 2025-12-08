@@ -1,4 +1,5 @@
 import { isActive } from "./isActive.js";
+import { removeExtension } from "./removeExtension.js";
 import { renderCards } from "./renderCards.js";
 import { getData, toggleExtensions } from "./toggleExtensions.js";
 
@@ -21,6 +22,7 @@ export function applyFilter() {
     renderCards(filteredExtensions);
     isActive();
     toggleExtensions();
+    removeExtension();
 
     buttons.forEach((btn) => {
       btn.classList.remove("selected");
@@ -41,3 +43,5 @@ export function applyFilter() {
     });
   }
 }
+
+//lê o filtro salvo no localStorage, filtra os dados, marca toggles e renderiza. NÃO ADICIONA EVENTO DE CLIQUE

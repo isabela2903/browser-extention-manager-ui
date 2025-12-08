@@ -1,3 +1,5 @@
+import { applyFilter } from "./applyFilter.js";
+
 export async function fetchData() {
   const response = await fetch("./data/data.json");
   const data = await response.json();
@@ -35,6 +37,7 @@ export function toggleExtensions() {
     toggle.addEventListener("click", (event) => {
       const name = event.currentTarget.getAttribute("data-name");
       updateExtension(name);
+      applyFilter();
     });
   });
 }

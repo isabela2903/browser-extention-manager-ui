@@ -1,14 +1,11 @@
 import { applyFilter } from "./applyFilter.js";
 import { changeTheme } from "./changeTheme.js";
 import { filterExtensions } from "./filterExtensions.js";
-import { isActive } from "./isActive.js";
-import { removeExtension } from "./removeExtension.js";
 import { renderCards } from "./renderCards.js";
 import {
   getData,
   loadData,
-  toggleExtensions,
-  fetchData,
+  fetchData
 } from "./toggleExtensions.js";
 
 fetchData();
@@ -20,11 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   applyFilter();
 
-  isActive();
-
-  toggleExtensions();
-
-  removeExtension();
-
   filterExtensions();
+  
 });
